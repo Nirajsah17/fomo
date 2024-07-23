@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  text-align: center;
+}
+
+.data-table {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.stock-selector {
+  margin: 20px;
+}
+
+.stock-selector label {
+  margin-right: 10px;
+}
+
+.stock-selector .dropdown {
+  padding: 5px;
+  font-size: 16px;
+}
