@@ -10,7 +10,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'your_mongodb_connection_string';
-const API_BASE_URL = 'https://api.coincap.io/v2';
+const API_BASE_URL = process.env.API_BASE_URL || 'https://api.coincap.io/v2';
+const POLLING_TIME = process.env.POLLING_TIME;
 
 app.use(express.json());
 app.use(cors());
@@ -44,7 +45,7 @@ const fetchData = async () => {
 };
 
 // Schedule data fetching every 10 seconds
-setInterval(fetchData, process.env.POLLING_TIME);
+setInterval(fetchData, Number(POLLING_TIME));
 
 // API endpoint to get the latest 20 entries for a symbol
 app.get('/api/data/:symbol', async (req, res) => {

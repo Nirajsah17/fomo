@@ -1,8 +1,9 @@
 import axios from 'axios';
+import { config } from "../config"
 
 export const fetchStockData = (symbol) => async (dispatch) => {
   try {
-    const response = await axios.get(`http://localhost:5000/api/data/${symbol}`);
+    const response = await axios.get(`${config.baseURI}/api/data/${symbol}`);
     const data = response.data;
     dispatch({
       type: 'SET_STOCK_DATA',
