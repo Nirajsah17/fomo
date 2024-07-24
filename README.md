@@ -59,7 +59,7 @@ npm i
 ```bash
 export const config = {
   pollingTime: 1000,
-  baseURI: "http://localhost:5001"
+  baseURI: "http://localhost:5000"
 }
 ```
 
